@@ -23,10 +23,14 @@ const initialState: UserState = {
   },
 }
 
-export const userSlice = createSlice({
+export const user = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    reset: state => {
+        state.response.status = null
+        state.response.message = null
+    },
     register: (state, action: PayloadAction<FormRegister>) => {
         const found = state.users.find(user => user.email === action.payload.email)
         if(found){
@@ -51,6 +55,7 @@ export const userSlice = createSlice({
         else if(found) {
             if(found.password === action.payload.password){
             state.loggedUser = found
+            state.response.message = 'logged'
           }
           else {
             state.response.status = false
@@ -65,6 +70,6 @@ export const userSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { register, login } = userSlice.actions
+export const { register, login } = user.actions
 
-export default userSlice.reducer
+export default user.reducer

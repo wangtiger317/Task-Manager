@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { login } from "@/store/userSlice"
-import { RootState } from "@/store"
+import { login } from "@/redux/features/userSlice"
+import { useAppSelector } from "@/redux/hooks"
 
 export default function Home() {
-  const res=useSelector((state:RootState)=>state.user.response)
+  const res= useAppSelector((state) => state.usersReducer.response)
   const dispatch = useDispatch()
   const [state, setState] = useState({
     email: '',
@@ -32,7 +32,7 @@ export default function Home() {
       <form onSubmit={handleSubmit}>
         <input type="text" name="email" onChange={handleChange} value={state.email} /> login <br />
         <input type="password" name="password" onChange={handleChange} value={state.password} /> password <br/>
-        <button></button>
+        <button>Submit</button>
       </form>
       {res.message && <p>{res.message}</p>}
     </main>
