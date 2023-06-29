@@ -2,16 +2,11 @@ import 'styled-components';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        title: string;
         colors: {
             primary: string;
             secondary: string;
             background: string;
             text: string;
-        };
-        fonts: {
-            primary: string;
-            secondary: string;
         };
         fontSizes: {
             sm: string;
@@ -33,11 +28,5 @@ declare module 'styled-components' {
         zIndex: {
             default: string;
         };
-        media: {
-            mobile: string;
-            tablet: string;
-            desktop: string;
-        };
-        breakpoints: {};
     }
 }

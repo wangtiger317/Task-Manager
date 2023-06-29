@@ -3,8 +3,8 @@ export const usersList = [
         id: '544143241',
         name: 'Bartosz',
         surname: 'Kowalski',
-        email: 'test@test.com',
-        password: 'test123',
+        email: 'test',
+        password: 'test',
         role: 'admin',
     },
     {

@@ -1,6 +1,7 @@
 
-import { Providers } from "@/redux/provider";
-import { GlobalStyles } from "@/styles/Global";
+import StyledComponentsRegistry from "@/lib/registry";
+import Providers from "./providers";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -15,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GlobalStyles />
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

@@ -1,14 +1,9 @@
 export const theme = {
-  title: "Task Manager",
   colors: {
     primary: "#007BFF",
     secondary: "#6C757D",
     background: "#F8F9FA",
     text: "#333333",
-  },
-  fonts: {
-    primary: "Arial, sans-serif",
-    secondary: "Roboto, sans-serif",
   },
   fontSizes: {
     sm: "0.875em",
@@ -31,3 +26,4 @@ export const theme = {
     default: "1",
   },
 } as const;
+

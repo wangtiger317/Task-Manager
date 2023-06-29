@@ -3,8 +3,6 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 
-
-
 export interface UserState {
   users: User[]
   loggedUser: User | null
@@ -62,10 +60,9 @@ export const user = createSlice({
             state.response.message = 'Wrong password'
           }
         }
-    }
-    
+    },
+    logout: state => initialState
   },
-  // logout, clearResponse - status null messgae null
 
 })
 
