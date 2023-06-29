@@ -1,9 +1,12 @@
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
-
+import { useState } from "react";
+import {lightTheme,darkTheme,GlobalStyles } from "../theme/ThemeConfig"
 export function ThemeAppProvider({children} : {children: React.ReactNode}) {
+  const [theme, setTheme] = useState("light") 
 
     return(
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider 
+         theme={theme == 'light' ? lightTheme : darkTheme}>
+        {children}</ThemeProvider>
     )
   }

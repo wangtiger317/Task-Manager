@@ -9,7 +9,7 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  background-color: ${(props) => props.theme.colors.secondary};
+ 
 `;
 
 export const Button = styled.button`

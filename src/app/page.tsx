@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="text" name="email" onChange={handleChange} value={state.email} /> login <br />
         <input type="password" name="password" onChange={handleChange} value={state.password} /> password <br/>
         <button>Submit</button>
@@ -40,7 +40,7 @@ export default function Home() {
         console.log(res) 
         return <></>
         }
-        )()} */}
+        )()}
     </main>
   )
 }
